@@ -41,6 +41,16 @@ export default function App() {
 
   // STRETCH - Make a helper function that returns
   // a filtered array of friends data (filtering by search term)
+  const getFilteredFriends = () => {
+    // loop over the friends array
+    // and only return names that contain the search term
+    // map, filter,       reduce
+    const filteredFriends = friends.filter(friend => {
+      return friend.name.includes(searchTerm);
+    })
+
+    return filteredFriends;
+  }
 
   return (
     <div className='app-friends container'>
