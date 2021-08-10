@@ -1,5 +1,5 @@
-import React from 'react'
-import PetsList from './PetsList'
+import React from 'react';
+import PetsList from './PetsList';
 
 export default function Friend(props) {
   // 👉 1- What does a Friend need?
