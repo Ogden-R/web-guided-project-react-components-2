@@ -5,6 +5,8 @@ export default function Search(props) {
   // the search term (which is state that lives in the top-level component)?
   const changeHandler = event => {
     // STRETCH - On 'change' of the input we should set a new search term in app state
+    console.log(event.target.value);
+    props.setSearchTerm(event.target.value);
   }
 
   return (

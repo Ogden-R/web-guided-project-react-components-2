@@ -46,7 +46,7 @@ export default function App() {
     // and only return names that contain the search term
     // map, filter,       reduce
     const filteredFriends = friends.filter(friend => {
-      return friend.name.includes(searchTerm);
+      return friend.name.toLowerCase().includes(searchTerm);
     })
 
     return filteredFriends;
@@ -56,11 +56,11 @@ export default function App() {
     <div className='app-friends container'>
       {/* 👉 6- Render the Search component */}
       {/* STRETCH - Changes to the input should update the search term */}
-      <Search />
+      <Search setSearchTerm={setSearchTerm} />
 
       {/* 👉 7- Render the FriendsList component */}
       {/* What prop/props does FriendsList need? */}
-      <FriendsList friends={friends} changeStatus={changeStatus} />
+      <FriendsList friends={getFilteredFriends()} changeStatus={changeStatus} />
       {/* props.friends = friends */}
       {/* FriendsList(friends) */}
     </div>
