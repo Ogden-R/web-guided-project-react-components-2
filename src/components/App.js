@@ -19,7 +19,7 @@ export default function App() {
 
   // 👉 5- Build a `changeStatus` function that takes an id and
   // changes the `married` from true to false and viceversa
-  console.log(friends);
+
   // Function expression
   const changeStatus = (id) => {
     // 1.) Loop over our friends array
@@ -46,7 +46,7 @@ export default function App() {
     // and only return names that contain the search term
     // map, filter,       reduce
     const filteredFriends = friends.filter(friend => {
-      return friend.name.toLowerCase().includes(searchTerm);
+      return friend.name.toLowerCase().includes(searchTerm.toLowerCase());
     })
 
     return filteredFriends;
